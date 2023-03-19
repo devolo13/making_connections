@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="leftNav">
+        <h1 class="nav-title">Profile</h1>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#" class="active">My Profile</a></li>
+          <li><a href="#">Find Connections</a></li>
+        </ul>
+      </div>
+      <button class="btn">Sign Out</button>
+    </div>
+    <div class="content">
+      <div class="leftSide">
+        <div class="userCard">
+          <div class="userBar"></div>
+          <div class="outerBox">
+            <img src="images/jane-m.jpg" alt="Jane's photo" id="janesPhoto" />
+            <div class="user">
+              <h1 id="userName">Jane Doe</h1>
+            </div>
+            <div class="loc">
+              <img
+                src="icons/map-marker.png"
+                alt="map-marker"
+                class="mapMarker"
+              />
+              Seattle
+            </div>
+            <div class="bio">
+              Developer | Engineer | Problem Solver<br />
+              Master of shadows and the Internet!
+            </div>
+            <div class="editProfile">
+              <img src="icons/gear.png" alt="gear" />
+              <!-- <a href="#">edit profile</a> -->
+              <button onclick="changeUser('userName')">edit profile</button>
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <div class="educationBar">
+            <h4>Education</h4>
+          </div>
+          <div class="educationContent">
+            <h3>Coding Dojo - Full Stack Bootcamp</h3>
+            <p class="dates">Dec 2019 - Mar 2020</p>
+            <p>Triple black belt in Python, MERN, and C#...</p>
+          </div>
+        </div>
+      </div>
+      <div class="rightSide">
+        <div class="connectionRequests">
+          <div class="requestsBar">
+            <p id="connectionCounter">2</p>
+            <h4>Connection Requests</h4>
+          </div>
+          <div class="requestEntries">
+            <div class="requesters" id="todd">
+              <div class="todd">
+                <img
+                  src="images/todd-s.jpg"
+                  alt="Todd's Photo"
+                  class="profilePic"
+                />
+                <p>Todd E</p>
+              </div>
+              <button onclick="connectionButtons('todd', true)">
+                <img
+                  src="icons/accept-circle.png"
+                  alt="accept button"
+                  class="checkBox"
+                />
+              </button>
+              <button onclick="connectionButtons('todd')">
+                <img
+                  src="icons/close-circle.png"
+                  alt="deny button"
+                  class="checkBox"
+                />
+              </button>
+            </div>
+            <div class="requesters" id="phil">
+              <div class="phil">
+                <img
+                  src="images/phil-s.jpg"
+                  alt="Phil's Photo"
+                  class="profilePic"
+                />
+                <p>Phil K</p>
+              </div>
+              <!-- <img
+                src="icons/accept-circle.png"
+                alt="accept button"
+                class="checkBox"
+              />
+              <img
+                src="icons/close-circle.png"
+                alt="deny button"
+                class="checkBox"
+              /> -->
+              <button onclick="connectionButtons('phil', true)">
+                <img
+                  src="icons/accept-circle.png"
+                  alt="accept button"
+                  class="checkBox"
+                />
+              </button>
+              <button onclick="connectionButtons('phil')">
+                <img
+                  src="icons/close-circle.png"
+                  alt="deny button"
+                  class="checkBox"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="yourConnections">
+          <div class="connectionsBar">
+            <p><span id="yourConnections">500</span>+</p>
+            <h4>Your Connections</h4>
+          </div>
+          <div class="connections">
+            <div class="adrien">
+              <img
+                src="images/adrien-s.jpg"
+                alt="Adrien's Photo"
+                class="profilePic"
+              />
+              <p>Adrien D</p>
+            </div>
+            <div class="Phil">
+              <img
+                src="images/anne-s.jpg"
+                alt="Anne's Photo"
+                class="profilePic"
+              />
+              <p>Anne J</p>
+            </div>
+            <div class="alayne">
+              <img
+                src="images/alayne-s.jpg"
+                alt="Alayne's Photo"
+                class="profilePic"
+              />
+              <p>Alayne T</p>
+            </div>
+            <div class="arry">
+              <img
+                src="images/arry-s.jpg"
+                alt="Arry's Photo"
+                class="profilePic"
+              />
+              <p>Arry Y</p>
+            </div>
+          </div>
+          <a href="#">View More</a>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
